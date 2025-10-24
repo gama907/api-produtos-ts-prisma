@@ -2,7 +2,7 @@
 
 API RESTful desenvolvida em Node.js com TypeScript, Express e Prisma, seguindo a arquitetura em camadas (Controller, Service, DTO) para gerenciar um catálogo de produtos. O banco de dados utilizado é o PostgreSQL, containerizado com Docker Compose para garantir um ambiente de desenvolvimento limpo e portátil.
 
-## 🚀 Tecnologias Utilizadas
+ Tecnologias Usadas
 
 *   **Linguagem:** TypeScript
 *   **Runtime:** Node.js
@@ -12,22 +12,22 @@ API RESTful desenvolvida em Node.js com TypeScript, Express e Prisma, seguindo a
 *   **Containerização:** Docker e Docker Compose
 *   **Arquitetura:** Camadas (Controller, Service, DTO)
 
-## 🛠️ Requisitos para Rodar
+  Requisitos para Rodar
 
 Você precisa ter o **Docker** e o **Docker Compose** instalados em sua máquina.
 
-## ⚙️ Como Rodar Localmente
+ Como Rodar Localmente
 
 Siga os passos abaixo para iniciar a aplicação:
 
-### 1. Clonar o Repositório
+ 1. Clonar o Repositório
 
 ```bash
-git clone [SEU_LINK_DO_REPOSITORIO]
+git clone https://github.com/gama907/api-produtos-ts-prisma.git
 cd desafio-backend
 ```
 
-### 2. Configurar e Iniciar o Ambiente
+ 2. Configurar e Iniciar o Ambiente
 
 O Docker Compose irá criar dois containers: `db` (PostgreSQL) e `app` (Node.js).
 
@@ -35,7 +35,7 @@ O Docker Compose irá criar dois containers: `db` (PostgreSQL) e `app` (Node.js)
 docker-compose up -d --build
 ```
 
-### 3. Executar a Migração do Banco de Dados
+ 3. Executar a Migração do Banco de Dados
 
 Após o container do PostgreSQL estar ativo, execute a migração do Prisma para criar a tabela `Product`:
 
@@ -46,7 +46,7 @@ Após o container do PostgreSQL estar ativo, execute a migração do Prisma para
 docker exec -it desafio-backend-app-1 npx prisma migrate dev --name init
 ```
 
-### 4. Iniciar a Aplicação
+ 4. Iniciar a Aplicação
 
 A aplicação deve iniciar automaticamente. Se não, você pode forçar a reinicialização do container `app`:
 
@@ -56,7 +56,7 @@ docker-compose restart app
 
 A API estará disponível em `http://localhost:3000`.
 
-## 📍 Endpoints da API (CRUD de Produtos)
+ Endpoints da API (CRUD de Produtos)
 
 Todos os endpoints utilizam o prefixo `/api/produtos`.
 
